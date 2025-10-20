@@ -38,74 +38,147 @@
         class="h-25 d-flex justify-content-center align-items-center px-3 py-4"
       >
         <input
-          type="number"
+          id="display"
+          type="text"
+          placeholder="0"
           class="w-100 h-100 rounded-4 p-4 fs-1 mt-3 bg-success-subtle border-0 focus-ring focus-ring-dark"
+          disabled
         />
       </div>
       <div class="h-75 p-4">
         <div class="h-100 row">
           <div class="col-3 d-flex justify-content-center align-items-center">
-            <button class="rounded-4 key btn btn-dark fs-5">7</button>
+            <button
+              class="rounded-4 key btn btn-dark fs-5"
+              onclick="displayValue('7')"
+            >
+              7
+            </button>
           </div>
 
           <div class="col-3 d-flex justify-content-center align-items-center">
-            <button class="rounded-4 key btn btn-dark fs-5">8</button>
+            <button
+              class="rounded-4 key btn btn-dark fs-5"
+              onclick="displayValue('8')"
+            >
+              8
+            </button>
           </div>
 
           <div class="col-3 d-flex justify-content-center align-items-center">
-            <button class="rounded-4 key btn btn-dark fs-5">9</button>
+            <button
+              class="rounded-4 key btn btn-dark fs-5"
+              onclick="displayValue('9')"
+            >
+              9
+            </button>
           </div>
 
           <div class="col-3 d-flex justify-content-center align-items-center">
-            <button class="rounded-4 key btn btn-dark fs-5">x</button>
+            <button
+              class="rounded-4 key btn btn-dark fs-5"
+              onclick="displayValue('*')"
+            >
+              x
+            </button>
           </div>
 
           <div class="col-3 d-flex justify-content-center align-items-center">
-            <button class="rounded-4 key btn btn-dark fs-5">4</button>
+            <button
+              class="rounded-4 key btn btn-dark fs-5"
+              onclick="displayValue('4')"
+            >
+              4
+            </button>
           </div>
 
           <div class="col-3 d-flex justify-content-center align-items-center">
-            <button class="rounded-4 key btn btn-dark fs-5">5</button>
+            <button
+              class="rounded-4 key btn btn-dark fs-5"
+              onclick="displayValue('5')"
+            >
+              5
+            </button>
           </div>
 
           <div class="col-3 d-flex justify-content-center align-items-center">
-            <button class="rounded-4 key btn btn-dark fs-5">6</button>
+            <button
+              class="rounded-4 key btn btn-dark fs-5"
+              onclick="displayValue('6')"
+            >
+              6
+            </button>
           </div>
 
           <div class="col-3 d-flex justify-content-center align-items-center">
-            <button class="rounded-4 key btn btn-dark fs-5">-</button>
+            <button
+              class="rounded-4 key btn btn-dark fs-5"
+              onclick="displayValue('-')"
+            >
+              -
+            </button>
           </div>
 
           <div class="col-3 d-flex justify-content-center align-items-center">
-            <button class="rounded-4 key btn btn-dark fs-5">1</button>
+            <button
+              class="rounded-4 key btn btn-dark fs-5"
+              onclick="displayValue('1')"
+            >
+              1
+            </button>
           </div>
 
           <div class="col-3 d-flex justify-content-center align-items-center">
-            <button class="rounded-4 key btn btn-dark fs-5">2</button>
+            <button
+              class="rounded-4 key btn btn-dark fs-5"
+              onclick="displayValue('2')"
+            >
+              2
+            </button>
           </div>
 
           <div class="col-3 d-flex justify-content-center align-items-center">
-            <button class="rounded-4 key btn btn-dark fs-5">3</button>
+            <button
+              class="rounded-4 key btn btn-dark fs-5"
+              onclick="displayValue('3')"
+            >
+              3
+            </button>
           </div>
 
           <div class="col-3 d-flex justify-content-center align-items-center">
-            <button class="rounded-4 key btn btn-dark fs-5">+</button>
+            <button
+              class="rounded-4 key btn btn-dark fs-5"
+              onclick="displayValue('+')"
+            >
+              +
+            </button>
           </div>
 
           <div
             class="col-9 d-flex justify-content-center align-items-center p-1"
           >
-            <button class="rounded-4 key btn btn-dark fs-5 w-100">0</button>
+            <button
+              class="rounded-4 key btn btn-dark fs-5 w-100"
+              onclick="displayValue('0')"
+            >
+              0
+            </button>
           </div>
 
           <div class="col-3 d-flex justify-content-center align-items-center">
-            <button class="rounded-4 key btn btn-dark fs-5">&divide;</button>
+            <button
+              class="rounded-4 key btn btn-dark fs-5"
+              onclick="displayValue('/')"
+            >
+              &divide;
+            </button>
           </div>
 
           <div
             class="col-4 d-flex justify-content-center align-items-center p-1"
           >
-            <button class="rounded-4 key btn btn-dark fs-5 w-100">
+            <button class="rounded-4 key btn btn-dark fs-5 w-100" onclick="backSpace()">
               <i class="fa-regular fa-delete-left"></i>
             </button>
           </div>
@@ -113,13 +186,22 @@
           <div
             class="col-4 d-flex justify-content-center align-items-center p-1"
           >
-            <button class="rounded-4 key btn btn-dark fs-5 w-100">AC</button>
+            <button
+              class="rounded-4 key btn btn-dark fs-5 w-100"
+              onclick="clearAllValue()"
+            >
+              AC
+            </button>
           </div>
 
           <div
             class="col-4 d-flex justify-content-center align-items-center p-1"
           >
-            <button id="equalBtn" class="rounded-4 key btn fs-5 fw-bold w-100">
+            <button
+              id="equalBtn"
+              class="rounded-4 key btn fs-5 fw-bold w-100"
+              onclick="calculate()"
+            >
               =
             </button>
           </div>
@@ -127,4 +209,5 @@
       </div>
     </div>
   </body>
+  <script src="./script.js"></script>
 </html>
